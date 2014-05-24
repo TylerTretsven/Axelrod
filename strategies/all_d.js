@@ -2,6 +2,6 @@
  * Always Defects
  * */
 
-module.exports = function() {
+module.exports = function(history) {
   return "D";
 };

@@ -10,4 +10,23 @@
  * their decisions.
  * */
 
+'use strict';
 
+// EXAMPLE MATCH
+
+// Import Modules
+var
+  Match        = require('./lib/match'),
+  PayoffMatrix = require('./lib/payoff');
+
+// Create a new payoff matrix
+var payoffs = new PayoffMatrix(4,3,2,1);
+
+// Create a new Match
+var match = new Match('default', 'tit_for_tat', payoffs, 1000);
+match.run();
+
+// Run the simulation
+var results = match.getScores();
+
+console.log(results);

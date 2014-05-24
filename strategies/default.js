@@ -1,4 +1,9 @@
-module.exports = function(){
+/**
+ * Default Strategy:
+ * > Randomly cooperates or defects
+ * */
+
+module.exports = function(history){
 
   // Probability of cooperation
   var p = Math.random();

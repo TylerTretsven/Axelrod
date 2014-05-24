@@ -6,8 +6,8 @@
  *    > rememberMove(turn, player)
  *
  * */
-module.exports = function() {
+module.exports = function(history) {
 
   // Always Cooperates
   return "C";
-}
+};

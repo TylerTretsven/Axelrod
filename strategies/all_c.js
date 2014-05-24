@@ -2,6 +2,6 @@
  * Always Cooperates
  * */
 
-module.exports = function() {
+module.exports = function(history) {
   return "C";
 };
