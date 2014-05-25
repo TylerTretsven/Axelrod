@@ -12,21 +12,22 @@
 
 'use strict';
 
-// EXAMPLE MATCH
+var PrisonersDilemma = require('./lib/game');
 
-// Import Modules
-var
-  Match        = require('./lib/match'),
-  PayoffMatrix = require('./lib/payoff');
+// EXAMPLE GAME
 
-// Create a new payoff matrix
-var payoffs = new PayoffMatrix(4,3,2,1);
+// Configure the game
+var config = {
 
-// Create a new Match
-var match = new Match('default', 'tit_for_tat', payoffs, 1000);
-match.run();
+  payoffs: {
+    "C:C": 3,
+    "D:D": 2,
+    "D:C": 1,
+    "C:D": 0
+  },
+  agentOneStrategy: "all_c",
+  agentTwoStrategy: "tit_for_tat",
+  rounds: 1000
+};
 
-// Run the simulation
-var results = match.getScores();
-
-console.log(results);
+PrisonersDilemma(config);
